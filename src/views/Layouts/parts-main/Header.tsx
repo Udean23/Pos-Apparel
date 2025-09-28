@@ -18,9 +18,9 @@ export const Header = ({
   const messageRef = useRef(null);
 
   const user = {
-    name: "John Doe",
-    email: "john.doe@example.com",
-    photo: null,
+    name: "Kim Minjeong",
+    email: "kimminj@example.com",
+    photo: "/public/img/User/userprofile.png",
   };
 
   const role = ["Super Admin"];
