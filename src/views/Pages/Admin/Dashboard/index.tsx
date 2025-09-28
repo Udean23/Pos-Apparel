@@ -1,6 +1,7 @@
 import React from 'react';
 import ApexCharts from 'react-apexcharts';
 import { Heart, Wallet, Shirt, Users, ShoppingBag } from 'lucide-react';
+import { Breadcrumb } from '@/views/Components/breadcrumb';
 
 const formatRupiah = (value: number) =>
     new Intl.NumberFormat("id-ID", { style: "currency", currency: "IDR", maximumFractionDigits: 0 }).format(value);
@@ -217,9 +218,10 @@ const FavouriteItem = ({ img, name }) => (
 const Dashboard = () => {
     return (
         <div className="p-6 space-y-6 bg-gray-50 min-h-screen">
-            <div className="text-2xl font-bold text-gray-700">
-                Dashboard
-            </div>
+            <Breadcrumb
+                title='Dashboard'
+                desc='Ringkasan kinerja toko Anda secara keseluruhan'
+            />
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
                 <div className="col-span-1 lg:col-span-2 bg-white rounded-2xl p-6 shadow-sm">
                     <div className="flex justify-between items-start mb-4">
