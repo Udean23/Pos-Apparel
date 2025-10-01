@@ -188,8 +188,8 @@ const CircularProgress = ({ percentage, size = 70, strokeWidth = 6, color = "#FB
 };
 
 const CardStat = ({ label, value, percentage = 75 }) => (
-    <div className="bg-white rounded-2xl p-4 shadow-sm w-full justify-center items-center flex">
-        <div className="flex items-center justify-between">
+    <div className="bg-white rounded-2xl p-4 shadow-sm w-full flex justify-center items-center">
+        <div className="flex items-center justify-between w-full">
             <div className="flex-1">
                 <div className="text-sm text-gray-500 mb-1">{label}</div>
                 <div className="text-xl font-semibold text-gray-900">{value}</div>
@@ -202,11 +202,13 @@ const CardStat = ({ label, value, percentage = 75 }) => (
 );
 
 const FavouriteItem = ({ img, name }) => (
-    <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+    <div className="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col">
         <img src={img} alt={name} className="w-full h-40 object-cover" />
-        <div className="p-3 text-center">
-            <div className="font-medium text-gray-800">{name}</div>
-            <div className="text-sm text-gray-500">(Ulasan 150) ⭐⭐⭐⭐⭐</div>
+        <div className="p-3 text-center flex-1 flex flex-col justify-between">
+            <div>
+                <div className="font-medium text-gray-800">{name}</div>
+                <div className="text-sm text-gray-500">(Ulasan 150) ⭐⭐⭐⭐⭐</div>
+            </div>
             <button className="mt-2 text-xs text-purple-600 bg-purple-100 px-2 py-1 rounded-full flex items-center justify-center mx-auto space-x-1">
                 <Heart size={14} fill="currentColor" className="text-purple-600" />
                 <span>12k Suka</span>
@@ -217,14 +219,14 @@ const FavouriteItem = ({ img, name }) => (
 
 const Dashboard = () => {
     return (
-        <div className="p-6 space-y-6 bg-gray-50 min-h-screen">
+        <div className="p-4 md:p-6 space-y-6 bg-gray-50 min-h-screen">
             <Breadcrumb
                 title='Dashboard'
                 desc='Ringkasan kinerja toko Anda secara keseluruhan'
             />
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-                <div className="col-span-1 lg:col-span-2 bg-white rounded-2xl p-6 shadow-sm">
-                    <div className="flex justify-between items-start mb-4">
+                <div className="col-span-1 lg:col-span-2 bg-white rounded-2xl p-4 md:p-6 shadow-sm">
+                    <div className="flex flex-col md:flex-row justify-between items-start mb-4 gap-2">
                         <div>
                             <h3 className="text-2xl font-bold text-gray-900">{formatRupiah(154000000)}</h3>
                             <p className="text-sm text-gray-500">
@@ -252,20 +254,19 @@ const Dashboard = () => {
                     <CardStat label="Total Pesanan" value="415" percentage={85} />
                 </div>
             </div>
-            <div className="bg-white rounded-2xl p-6 shadow-sm">
+            <div className="bg-white rounded-2xl p-4 md:p-6 shadow-sm">
                 <div className="mb-4">
                     <h2 className="text-lg font-semibold text-gray-700">Produk Terlaris</h2>
                 </div>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                     <FavouriteItem name="Jersey Bola Nike" img="https://source.unsplash.com/400x300/?jersey" />
                     <FavouriteItem name="Sepatu Lari Adidas" img="https://source.unsplash.com/400x300/?sneakers" />
                     <FavouriteItem name="Topi Training Puma" img="https://source.unsplash.com/400x300/?cap" />
                     <FavouriteItem name="Jaket Olahraga" img="https://source.unsplash.com/400x300/?jacket" />
                 </div>
             </div>
-
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                <div className="bg-white rounded-2xl p-4 md:p-6 shadow-sm">
                     <h2 className="text-lg font-semibold text-gray-700 mb-4">Ringkasan Penjualan</h2>
                     <ApexCharts
                         options={yearlySalesData.options}
@@ -274,7 +275,7 @@ const Dashboard = () => {
                         height={240}
                     />
                 </div>
-                <div className="bg-white rounded-2xl p-6 shadow-sm">
+                <div className="bg-white rounded-2xl p-4 md:p-6 shadow-sm">
                     <h2 className="text-lg font-semibold text-gray-700 mb-4">Alur Pelanggan</h2>
                     <ApexCharts
                         options={customerFlowData.options}
