@@ -1,3 +1,11 @@
 export {default as Dashboard} from './Admin/Dashboard';
 export {default as Cashier} from './Admin/Cashier';
 export {default as Category} from './Admin/Category';
+export {default as Product} from './Admin/Product';
+export {default as Color} from './Admin/Color';
+export {default as Size} from './Admin/Size';
+export {default as Bundling} from './Admin/Bundling';
+export {default as Discount} from './Admin/Discount';
+export {default as BundlingDetail} from './Admin/Bundling/detail';
+export {default as BundlingCreate} from './Admin/Bundling/widgets/Create';
+export {default as BundlingEdit} from './Admin/Bundling/widgets/Edit';

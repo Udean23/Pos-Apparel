@@ -148,7 +148,7 @@ export const Sidebar = ({ sidebar }: { sidebar: string }) => {
       )}
       {isMobile && isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
+          className="fixed inset-0 bg-[#00000075] z-30 lg:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}

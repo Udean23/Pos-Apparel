@@ -71,17 +71,17 @@ export const menuItems = [
             {
                 label: "Diskon",
                 icon: <DiamondPercent size={16} />,
-                path: "/blendings",
+                path: "/discounts",
             },
             {
                 label: "Warna",
                 icon: <BiColor />,
-                path: "/requeststock",
+                path: "/colors",
             },
             {
                 label: "Ukuran",
                 icon: <FaBoxesPacking />,
-                path: "/requeststock",
+                path: "/sizes",
             },
         ],
     },

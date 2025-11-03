@@ -63,10 +63,6 @@ export const Header = ({
         >
           <FiMenu size={20} />
         </button>
-        
-        <div className="text-white font-semibold text-lg">
-          Search Jobs
-        </div>
       </div>
 
 

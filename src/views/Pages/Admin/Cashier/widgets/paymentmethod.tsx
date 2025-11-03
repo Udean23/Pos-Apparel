@@ -1,5 +1,6 @@
 import { X, ChevronDown } from "lucide-react";
 import CalculatorCard from "./calculator";
+import { BiMoney } from "react-icons/bi";
 
 const PaymentModal = ({
   cart,
@@ -60,8 +61,8 @@ const PaymentModal = ({
               <h3 className="font-medium mb-3 text-sm text-gray-700">Select a payment method</h3>
               <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border border-gray-200 cursor-pointer hover:bg-gray-100">
                 <div className="flex items-center gap-2">
-                  <div className="w-6 h-6 bg-gray-600 rounded flex items-center justify-center text-white text-xs">
-                    💳
+                  <div className="w-6 h-6 rounded flex items-center justify-center text-white text-xs">
+                    <BiMoney color="green" size={24}/>
                   </div>
                   <span className="text-sm font-medium">Cash</span>
                 </div>
